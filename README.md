@@ -1,2 +1,3 @@
-# Technical-Interviews
-This is a repository for contained the optimal solution for the problem asked by different companies in the technical interviews
+# Technical-Interviews FAANG
+This is a repository contained the most optimal solution for the various problems asked by different companies in the technical interviews.
+
