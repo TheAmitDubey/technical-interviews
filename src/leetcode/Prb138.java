@@ -16,11 +16,38 @@ public class Prb138 {
 		
 		cur = head;
 		
+		//Copy node with next pointer
+		
 		while(cur != null) {
 			AdvanceListNode tmp = cur.next;
 			
 			cur.next = new AdvanceListNode(cur.val, tmp, null);
 			
+			cur = tmp;
+		}
+		
+		//Correct the random pointer
+		cur = head;
+		
+		while(cur!=null) {
+			if(cur.random != null) {
+				cur.next.random = cur.random.next;
+			}
+			cur = cur.next.next;
+		}
+		
+		// Remove the links
+		
+		cur = head;
+		copy = head.next;
+		
+		while(cur!=null) {
+			AdvanceListNode tmp = cur.next.next;
+			copy = cur.next;
+			cur.next = tmp;
+			if(tmp != null) {
+				copy.next = tmp.next;
+			}
 			cur = tmp;
 		}
 		
